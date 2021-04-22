@@ -1,0 +1,145 @@
+﻿@model IEnumerable<Models.EF.SinhVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tìm kiếm</h2>
+
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSinhVien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatKhau)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaSinhVien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatKhau)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaSinhVien }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaSinhVien }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaSinhVien })
+            </td>
+        </tr>
+    }
+</table>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem Tra</title>
+
+    <style>
+        table {
+            width: 80%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        #t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        #t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        #t01 th {
+            background-color: darkblue;
+            color: white;
+        }
+        button{
+            color: white;
+            background-color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-top: 100px;">
+            
+        <form action="Index">
+            <input type="text" name="term" value="Nhap ten sinh vien">
+            <input type="text" name="fclass" value="Nhap lop sinh vien">
+            <button id="button">Tim kiem</button>
+        </form>
+        
+    </div>
+    <div>
+        <table id="t01" style="margin-top: 50px;">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaSinhVien)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HoTen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MatKhau)
+                </th>
+
+
+
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaSinhVien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MatKhau)
+                    </td>
+
+
+                </tr>
+            }
+
+
+        </table>
+       @foreach (var item in Model)
+       {
+           if (item==null)
+           {
+               @Html.DisplayText("Không tồn tại sinh viên")
+           }
+       }
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\bin\Debug\Models.dll.config
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\bin\Debug\Models.dll
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\bin\Debug\Models.pdb
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\bin\Debug\EntityFramework.dll
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\bin\Debug\EntityFramework.xml
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\obj\Debug\Models.csproj.CopyComplete
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\obj\Debug\Models.dll
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\obj\Debug\Models.pdb
+E:\Learn\APS.NET\BaiTap_TrenLop\Bai1\Models\Models\obj\Debug\Models.csprojAssemblyReference.cache

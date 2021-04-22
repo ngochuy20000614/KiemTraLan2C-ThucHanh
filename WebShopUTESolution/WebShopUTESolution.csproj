@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02494237-A383-47DD-9449-6CA91D17E2B5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebShopUTESolution</RootNamespace>
+    <AssemblyName>WebShopUTESolution</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44301</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Models\LoginModel.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SinhVien.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\bs3\css\bootstrap-theme.css" />
+    <Content Include="Assets\bs3\css\bootstrap-theme.min.css" />
+    <Content Include="Assets\bs3\css\bootstrap.css" />
+    <Content Include="Assets\bs3\css\bootstrap.min.css" />
+    <Content Include="Assets\bs3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\bs3\js\bootstrap.js" />
+    <Content Include="Assets\bs3\js\bootstrap.min.js" />
+    <Content Include="Assets\bucket-ico-fonts\bucket-ico-font.svg" />
+    <Content Include="Assets\css\blue-theme.css" />
+    <Content Include="Assets\css\bootstrap-reset.css" />
+    <Content Include="Assets\css\bootstrap-switch.css" />
+    <Content Include="Assets\css\bucket-ico-fonts.css" />
+    <Content Include="Assets\css\clndr.css" />
+    <Content Include="Assets\css\default-theme.css" />
+    <Content Include="Assets\css\green-theme.css" />
+    <Content Include="Assets\css\invoice-print.css" />
+    <Content Include="Assets\css\jquery.steps.css" />
+    <Content Include="Assets\css\orange-theme.css" />
+    <Content Include="Assets\css\purple-theme.css" />
+    <Content Include="Assets\css\style-responsive.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\css\table-responsive.css" />
+    <Content Include="Assets\css\turquoise-theme.css" />
+    <Content Include="Assets\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\images\404.png" />
+    <Content Include="Assets\images\500.png" />
+    <Content Include="Assets\images\acc-expand.png" />
+    <Content Include="Assets\images\avatar-mini-2.jpg" />
+    <Content Include="Assets\images\avatar-mini-3.jpg" />
+    <Content Include="Assets\images\avatar-mini-4.jpg" />
+    <Content Include="Assets\images\avatar-mini.jpg" />
+    <Content Include="Assets\images\avatar1.jpg" />
+    <Content Include="Assets\images\avatar1_small.jpg" />
+    <Content Include="Assets\images\bucket-logo.png" />
+    <Content Include="Assets\images\chat-avatar2.jpg" />
+    <Content Include="Assets\images\chat-user-thumb-f.png" />
+    <Content Include="Assets\images\chat-user-thumb.png" />
+    <Content Include="Assets\images\crazy-price.jpg" />
+    <Content Include="Assets\images\customSelect-arrow.gif" />
+    <Content Include="Assets\images\details_close.png" />
+    <Content Include="Assets\images\details_open.png" />
+    <Content Include="Assets\images\flags\de.png" />
+    <Content Include="Assets\images\flags\es.png" />
+    <Content Include="Assets\images\flags\fr.png" />
+    <Content Include="Assets\images\flags\ru.png" />
+    <Content Include="Assets\images\flags\us.png" />
+    <Content Include="Assets\images\gallery\image1.jpg" />
+    <Content Include="Assets\images\gallery\image2.jpg" />
+    <Content Include="Assets\images\gallery\image3.jpg" />
+    <Content Include="Assets\images\gallery\image4.jpg" />
+    <Content Include="Assets\images\gallery\image5.jpg" />
+    <Content Include="Assets\images\input-spinner.gif" />
+    <Content Include="Assets\images\lock-screen.jpg" />
+    <Content Include="Assets\images\lock_thumb.jpg" />
+    <Content Include="Assets\images\logo.png" />
+    <Content Include="Assets\images\nav-expand.png" />
+    <Content Include="Assets\images\product_img.png" />
+    <Content Include="Assets\images\search-icon.png" />
+    <Content Include="Assets\images\sm-img-1.jpg" />
+    <Content Include="Assets\images\sm-img-2.jpg" />
+    <Content Include="Assets\images\sm-img-3.jpg" />
+    <Content Include="Assets\images\top-arrow.png" />
+    <Content Include="Assets\images\twitter_corner_black.png" />
+    <Content Include="Assets\images\twitter_corner_blue.png" />
+    <Content Include="Assets\images\weather_image.jpg" />
+    <Content Include="Assets\js\advanced-datatable\css\demo_page.css" />
+    <Content Include="Assets\js\advanced-datatable\css\demo_table.css" />
+    <Content Include="Assets\js\advanced-datatable\css\demo_table_jui.css" />
+    <Content Include="Assets\js\advanced-datatable\css\jquery.dataTables.css" />
+    <Content Include="Assets\js\advanced-datatable\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Assets\js\advanced-datatable\images\back_disabled.png" />
+    <Content Include="Assets\js\advanced-datatable\images\back_enabled.png" />
+    <Content Include="Assets\js\advanced-datatable\images\back_enabled_hover.png" />
+    <Content Include="Assets\js\advanced-datatable\images\favicon.ico" />
+    <Content Include="Assets\js\advanced-datatable\images\forward_disabled.png" />
+    <Content Include="Assets\js\advanced-datatable\images\forward_enabled.png" />
+    <Content Include="Assets\js\advanced-datatable\images\forward_enabled_hover.png" />
+    <Content Include="Assets\js\advanced-datatable\images\sort_asc.png" />
+    <Content Include="Assets\js\advanced-datatable\images\sort_asc_disabled.png" />
+    <Content Include="Assets\js\advanced-datatable\images\sort_both.png" />
+    <Content Include="Assets\js\advanced-datatable\images\sort_desc.png" />
+    <Content Include="Assets\js\advanced-datatable\images\sort_desc_disabled.png" />
+    <Content Include="Assets\js\advanced-datatable\js\jquery.dataTables.js" />
+    <Content Include="Assets\js\advanced-datatable\js\jquery.dataTables.min.js" />
+    <Content Include="Assets\js\advanced-datatable\js\jquery.js" />
+    <Content Include="Assets\js\advanced-datatable\src\api\api.internal.js" />
+    <Content Include="Assets\js\advanced-datatable\src\api\api.methods.js" />
+    <Content Include="Assets\js\advanced-datatable\src\api\api.static.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.ajax.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.columns.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.constructor.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.data.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.draw.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.filter.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.info.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.init.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.length.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.page.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.processing.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.scrolling.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.sizing.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.sort.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.state.js" />
+    <Content Include="Assets\js\advanced-datatable\src\core\core.support.js" />
+    <Content Include="Assets\js\advanced-datatable\src\DataTables.js" />
+    <Content Include="Assets\js\advanced-datatable\src\ext\ext.classes.js" />
+    <Content Include="Assets\js\advanced-datatable\src\ext\ext.paging.js" />
+    <Content Include="Assets\js\advanced-datatable\src\ext\ext.sorting.js" />
+    <Content Include="Assets\js\advanced-datatable\src\ext\ext.types.js" />
+    <Content Include="Assets\js\advanced-datatable\src\model\model.column.js" />
+    <Content Include="Assets\js\advanced-datatable\src\model\model.defaults.columns.js" />
+    <Content Include="Assets\js\advanced-datatable\src\model\model.defaults.js" />
+    <Content Include="Assets\js\advanced-datatable\src\model\model.ext.js" />
+    <Content Include="Assets\js\advanced-datatable\src\model\model.row.js" />
+    <Content Include="Assets\js\advanced-datatable\src\model\model.search.js" />
+    <Content Include="Assets\js\advanced-datatable\src\model\model.settings.js" />
+    <Content Include="Assets\js\advanced-form.js" />
+    <Content Include="Assets\js\bootstrap-colorpicker\css\colorpicker.css" />
+    <Content Include="Assets\js\bootstrap-colorpicker\img\alpha.png" />
+    <Content Include="Assets\js\bootstrap-colorpicker\img\hue.png" />
+    <Content Include="Assets\js\bootstrap-colorpicker\img\saturation.png" />
+    <Content Include="Assets\js\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="Assets\js\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="Assets\js\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="Assets\js\bootstrap-daterangepicker\date.js" />
+    <Content Include="Assets\js\bootstrap-daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="Assets\js\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="Assets\js\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="Assets\js\bootstrap-daterangepicker\examples.html" />
+    <Content Include="Assets\js\bootstrap-daterangepicker\moment.js" />
+    <Content Include="Assets\js\bootstrap-daterangepicker\moment.min.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\css\datetimepicker.css" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\bootstrap-datetimepicker.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.bg.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ca.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.cs.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.da.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.de.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.el.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.es.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.fi.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.fr.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.he.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.hr.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.hu.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.id.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.is.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.it.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ja.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.kr.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.lt.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.lv.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ms.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.nb.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.nl.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.pl.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.pt-BR.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.pt.js" />
+    <Content Include="Assets\js\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ro.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <Content Include="Assets\bs3\css\bootstrap-theme.css.map" />
+    <Content Include="Assets\bs3\css\bootstrap.css.map" />
+    <Content Include="Assets\bs3\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\bs3\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\bs3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\bucket-ico-fonts\bucket-ico-font.eot" />
+    <Content Include="Assets\bucket-ico-fonts\bucket-ico-font.ttf" />
+    <Content Include="Assets\bucket-ico-fonts\bucket-ico-font.woff" />
+    <Content Include="Assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Assets\font-awesome\less\core.less" />
+    <Content Include="Assets\font-awesome\less\fixed-width.less" />
+    <Content Include="Assets\font-awesome\less\font-awesome.less" />
+    <Content Include="Assets\font-awesome\less\icons.less" />
+    <Content Include="Assets\font-awesome\less\larger.less" />
+    <Content Include="Assets\font-awesome\less\list.less" />
+    <Content Include="Assets\font-awesome\less\mixins.less" />
+    <Content Include="Assets\font-awesome\less\path.less" />
+    <Content Include="Assets\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Assets\font-awesome\less\spinning.less" />
+    <Content Include="Assets\font-awesome\less\stacked.less" />
+    <Content Include="Assets\font-awesome\less\variables.less" />
+    <Content Include="Assets\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Assets\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\font-awesome\scss\_core.scss" />
+    <Content Include="Assets\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Assets\font-awesome\scss\_icons.scss" />
+    <Content Include="Assets\font-awesome\scss\_larger.scss" />
+    <Content Include="Assets\font-awesome\scss\_list.scss" />
+    <Content Include="Assets\font-awesome\scss\_mixins.scss" />
+    <Content Include="Assets\font-awesome\scss\_path.scss" />
+    <Content Include="Assets\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\font-awesome\scss\_spinning.scss" />
+    <Content Include="Assets\font-awesome\scss\_stacked.scss" />
+    <Content Include="Assets\font-awesome\scss\_variables.scss" />
+    <Content Include="Assets\js\advanced-datatable\images\Sorting icons.psd" />
+    <Content Include="Assets\js\bootstrap-colorpicker\less\colorpicker.less" />
+    <Content Include="Assets\js\bootstrap-datepicker\less\datepicker.less" />
+    <Content Include="Assets\js\bootstrap-daterangepicker\README.md" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{35204d4a-f817-4910-95f5-7a251d19db31}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57204</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44301/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
